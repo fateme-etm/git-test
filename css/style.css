@@ -15,9 +15,11 @@
     --color-primary-light:#FF7A50;
     --color-secondary-light:#FFF6F2;
     --color-secondary-dark:#FFA589;
+    --color-input-border: #E8E8E8;
+    --color-input-background:#F5F5F5;
     --color-navbar:#F8F8F8;
     --color-white:#ffffff;
-    --transition-time: all 0.5s ease-in;
+    --transition-time: all 0.3s ease-in;
 }
 
 html{
@@ -61,6 +63,7 @@ body{
     padding: 1.5rem 2.2rem;
     border-radius: 8px;
     font-size: 1.4rem;
+    cursor: pointer;
 }
 .btn-primary{
     background-color: var(--color-primary);
@@ -207,4 +210,120 @@ body{
         max-width: 65rem;
     }
 
+}
+
+/* CANTACT-US */
+.icon{
+    width:2.5rem;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+}
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+
+.contact-us__social-media, .icon-holder{
+    display: flex;
+    flex-direction: row;
+}
+.contact-us__social-media, .contact-us__icons{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 10rem;
+}
+
+.icon-holder{
+    direction: ltr;
+}
+
+.contact-us__map{
+    display: none;
+}
+
+/* FORM */
+.contact-us__form > form{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    border: 1px solid #DDDDDD;
+    border-radius: 20px;
+    padding: 5rem;
+}
+.contact-us__form h3{
+    text-align: center;
+}
+.contact-us__form .btn{
+    width:14.5rem;
+    align-self: flex-end;
+    border-radius: 35px;
+    font-size: 2rem;
+}
+
+.contact-us__form input, .contact-us__form textarea{
+    outline: 0;
+    border: 1px solid var(--color-input-border) ;
+    background-color: var(--color-input-background);
+    border-radius: 39px;
+    padding: 1rem 1.5rem;
+    transition: var(--transition-time);
+}
+.contact-us__form textarea{
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact-us__form input:focus, .contact-us__form textarea:focus{
+    border: 1px solid var(--color-primary);
+}
+
+@media screen and (min-width:1024px) {
+    .contact-us{
+        display: grid;
+        grid-template-areas: 
+        "icon form"
+        "map form"
+        "social form";
+        gap: 1rem 5rem;
+    }
+   .contact-us__form{
+    grid-area: form;
+   }
+   .contact-us__icons{
+    grid-area: icon;
+    padding: 0;
+   }
+   .contact-us__map{
+    display: block;
+   }
+   .contact-us__map > img{
+    width:62.5rem;
+    height: auto;
+    grid-area: map;
+   }
+   .contact-us__social-media{
+    grid-area: social;
+    padding: 0;
+    justify-content: flex-end;
+   }
+   .contact-us__icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .icon-holder{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .contact-us__social-media .icon{
+    margin-right: 3rem;
+   }
 }
