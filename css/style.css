@@ -78,6 +78,7 @@ h3{
     }
 }
 
+/* BADGE */
 .badge{
     padding: 0.7rem 1.1rem;
     border: 2px solid var(--color-primary);
@@ -92,4 +93,14 @@ h3{
     font-size: 1.2rem;
     background-color: var(--color-secondary-light);
     color: var(--color-primary);
+}
+
+/* LIST */
+.list{
+    font-size: 1.8rem;
+}
+.list__item{
+    background: url(/assets/images/Tick-Square.svg) right center;
+    background-repeat: no-repeat;
+    padding: 1rem 3rem;
 }
