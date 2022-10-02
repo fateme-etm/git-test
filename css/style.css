@@ -26,24 +26,30 @@ html{
 
 /* TYPOGRAPHY */
 h1{
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 h2{
-    font-size: 2.2rem
+    font-size: 1.8rem
 }
 h3{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+}
+body{
+    font-size: 1.4rem;
 }
 
 @media screen and (min-width:1024px) {
     h1{
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
     h2{
-        font-size: 1.8rem
+        font-size: 2.2rem
     }
     h3{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+    body{
+        font-size: 1.8rem;
     }
 }
 
@@ -160,3 +166,45 @@ h3{
         gap: 5rem;
     }
     }
+
+/* FEATURE */
+.feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.feature__img{
+    margin-bottom: 5rem;
+}
+.feature__img > img{
+    width: 32.5rem;
+    height: auto;
+}
+.feature__detail{
+    max-width: 40rem;
+}
+.feature__text{
+    margin: 4rem 0;
+}
+
+@media screen and (min-width:1024px) {
+    .feature{
+        flex-direction: row;
+    }
+    .feature__img{
+        margin-bottom: 0;
+        margin-right: 5rem;
+        order: 2;
+    }
+    .feature__img > img{
+        width: 57rem;
+        height: auto;
+    }
+    .feature__detail{
+        order: 1;
+        max-width: 65rem;
+    }
+
+}
