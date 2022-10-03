@@ -528,3 +528,102 @@ body {
         width: 13rem;
     }
 }
+
+
+/* HERO */
+.hero{
+    width: 100vw;
+    position: relative;
+}
+.hero__bg{
+    width: 100%;
+    height: auto;
+}
+.hero__banner{
+    width: 40rem;
+    position: relative;
+    top: -15rem;
+    right: 40rem;
+    display: none;
+}
+.hero__apps{
+    width: 30rem;
+    margin: auto;
+    transform: translateY(-480px);
+    border-radius: 20px;
+    padding: 3rem;
+    color: var(--color-white);
+    background-image: linear-gradient(51deg,rgba(23,26,60,.7) 5%,rgba(23,26,60,.3) 95%);
+}
+.hero__apps h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero__apps__btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 3rem;
+    margin-top: 3rem;
+}
+.hero__apps__btn{
+    padding: 1.5rem 2rem;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.hero__apps__text:hover{
+    color: #807979;
+}
+.hero__apps__btn--passenger{
+    background-color: var(--color-white);
+}
+.hero__apps__btn--driver{
+    border: 2px solid var(--color-white);
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color-white);
+}
+.hero__apps__icon{
+    position: absolute;
+    right: 2rem;
+}
+@media screen and (min-width:550px) and (max-width:1024px) {
+    .hero__apps__btns{
+        flex-direction: row;
+    }
+    .hero__apps{
+        width: 60rem;
+        transform: translate(-100px, -300px);
+        margin: 0;
+    }
+    .hero__apps__btn{
+        width: 45%;
+        font-size: 1.5rem;
+        position: relative;
+    }
+    
+}
+@media screen and (min-width:1025px) {
+    .hero__banner{
+        display: flex;
+    }
+    .hero__apps__btns{
+        flex-direction: row;
+    }
+    .hero__apps{
+        width: 60rem;
+        transform: translate(-100px, -1000px);
+        margin: 0;
+    }
+    .hero__apps__btn{
+        width: 45%;
+        font-size: 1.5rem;
+        position: relative;
+    }
+    .hero__apps h1{
+        font-size: 5rem;
+    }
+}
