@@ -5,6 +5,8 @@
 //     navbar.classList.toggle("navbar-expanded");
 // });
 
+
+
 const tabs = document.querySelectorAll(".services__tab");
 const tabDetails = document.querySelectorAll(".services__detail");
 
