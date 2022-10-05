@@ -49,7 +49,7 @@ body {
 
 @media screen and (min-width:1024px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     h2 {
@@ -74,7 +74,8 @@ body {
 .btn {
     outline: 0;
     border: 0;
-    padding: 1.5rem 2.2rem;
+    padding: 1rem 2.2rem;
+    text-align: center;
     border-radius: 8px;
     font-size: 1.4rem;
     cursor: pointer;
@@ -197,53 +198,67 @@ body {
 }
 
 /* FEATURE */
+.features{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}
 .feature {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    margin-bottom: 10rem;
 }
-
-.feature__img {
-    margin-bottom: 5rem;
-}
-
-.feature__img>img {
-    width: 32.5rem;
+.feature__img{
+    width: 30rem;
     height: auto;
 }
+.feature__detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 4rem;
 
-.feature__detail {
-    max-width: 40rem;
+    }
+
+.feature__detail > p{
+    line-height: 3rem;
+    margin: 2rem 0;
 }
-
-.feature__text {
-    margin: 4rem 0;
+.feature__detail > .btn{
+    width: 20rem;
 }
 
 @media screen and (min-width:1024px) {
     .feature {
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
-
-    .feature__img {
-        margin-bottom: 0;
-        margin-right: 5rem;
+    .feature__detail{
+        margin-top: 0;
+    }
+    .feature__img{
+        width: 40rem;
+    }
+    .feature__img.left{
         order: 2;
     }
-
-    .feature__img>img {
-        width: 57rem;
-        height: auto;
+    .feature__detail > h2{
+        font-size: 3rem;
     }
-
-    .feature__detail {
-        order: 1;
-        max-width: 65rem;
+    .feature__detail > p{
+        width: 60rem;
+        margin: 4rem 0;
+    }
+    .feature__detail > .btn{
+        width: 25rem;
     }
 
 }
+
+
 
 /* CANTACT-US */
 .icon {
@@ -399,8 +414,9 @@ body {
     border-radius: 5px;
     transition: var(--transition-time);
 }
-.navbar > .btn{
-    display: none;
+.navbar .btn{
+    display: none;    
+    padding: 0.8rem 4rem;
 }
 .navbar__list {
     margin-top: 1rem;
@@ -415,7 +431,7 @@ body {
     transition: var(--transition-time);
 }
 .navbar__list__item > a{
-    color: var(--color-gray-light);
+    color: var(--color-gray);
 }
 .navbar__list__item a:hover {
     color: var(--color-primary);
@@ -439,7 +455,7 @@ body {
 @media screen and (min-width:1024px) {
     .navbar {
         flex-direction: row;
-        padding: 1rem 10rem;
+        padding: 0.5rem 10rem;
     }
     .navbar > .btn{
         display: flex;
@@ -459,6 +475,7 @@ body {
     .navbar__list__item {
         margin-left: 5rem;
         border: 0;
+        font-size: 1.5rem;
     }
 
 }
@@ -537,18 +554,19 @@ body {
 
 /* HERO */
 .hero{
-    width: 100vw;
-    position: relative;
+    width: 100%;
+    height: 45rem;
+    overflow: hidden;
 }
 .hero__bg{
     width: 100%;
-    height: auto;
+    height: 40rem;
 }
 .hero__banner{
     width: 40rem;
     position: relative;
-    top: -15rem;
-    right: 40rem;
+    top: -35rem;
+    right: 80rem;
     display: none;
 }
 .hero__apps{
@@ -600,18 +618,24 @@ body {
         flex-direction: row;
     }
     .hero__apps{
-        width: 60rem;
-        transform: translate(-100px, -300px);
+        width: 50rem;
+        transform: translate(-100px, -350px);
         margin: 0;
     }
     .hero__apps__btn{
         width: 45%;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         position: relative;
+    }
+    .hero__apps__icon{
+        right: 1rem;
     }
     
 }
 @media screen and (min-width:1025px) {
+    .hero{
+        height: 65rem;
+    }
     .hero__banner{
         display: flex;
     }
@@ -619,21 +643,27 @@ body {
         flex-direction: row;
     }
     .hero__apps{
-        width: 60rem;
+        width: 50rem;
         transform: translate(-100px, -1000px);
         margin: 0;
     }
     .hero__apps__btn{
         width: 45%;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         position: relative;
     }
     .hero__apps h1{
         font-size: 5rem;
     }
+    .hero__apps__icon{
+        right: 1rem;
+    }
 }
 
 /* SERVICES */
+.services h1{
+    margin-bottom: 5rem;
+}
 .services__tabs{
     display: flex;
     flex-direction: row;
@@ -693,6 +723,8 @@ display: none;
         }
         .services__detail__text >p{
             width: 60rem;
+            margin: 3rem 0;
+
         }
 }
 
